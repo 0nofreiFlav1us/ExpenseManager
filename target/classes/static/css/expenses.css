@@ -1,0 +1,419 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin: 50px;
+}
+
+/* GLOBAL TABLE STYLING */
+table {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 25px;
+    color: #EDF2F4;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #201F2C;
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 750;
+    font-size: 22px;
+    color: #EDF2F4;
+}
+
+/* THIS IS THE TABLE FOR VIEWING MY EXPENSES */
+.main-table-header {
+    background-color: #A4031F;
+    box-shadow: 8px -8px 0 #840016;
+}
+
+.main-table-content {
+    height: 870px;
+    overflow-x: auto;
+    margin-top: 0;
+    border: 15px solid white;
+    background-color: #272635;
+}
+
+/* THIS IS THE TABLE FOR EDITING MY EXPENSES */
+.editor-container {
+    background-color: #272635;
+    font-weight: bold;
+    border: 15px solid white;
+}
+
+#hide-editor-header {
+    display: none;
+}
+
+.editor-container input, .editor-container a, .editor-container button, .editor-container select {
+     font-size: 20px;
+     color: #EDF2F4;
+     font-weight: 750;
+     background-color: #272635;
+     border: none;
+     text-align: center;
+}
+
+button:hover, a:hover {
+    color: #A4031F;
+}
+
+.editor-table-content {
+    margin-top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#hide-editor {
+    display: none;
+}
+
+/* THIS IS THE TABLE FOR ADDING EXPENSES */
+.add-container {
+    background-color: #272635;
+    font-weight: bold;
+    border: 15px solid white;
+}
+
+.add-table-content {
+    margin-top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.add-container .manual input, .add-container .manual select, .add-container .manual button {
+     font-size: 20px;
+     color: #EDF2F4;
+     font-weight: 750;
+     background-color: #272635;
+     border: none;
+     text-align: center;
+}
+
+.add-container .manual input {
+     font-size: 20px;
+     color: #EDF2F4;
+     font-weight: 750;
+     background-color: #272635;
+     border: none;
+     text-align: center;
+}
+
+.add-container .image input, .add-container .image select, .add-container .image button {
+     font-size: 20px;
+     color: #EDF2F4;
+     font-weight: 750;
+     background-color: #201F2C;
+     border: none;
+     text-align: center;
+}
+
+.add-container button:hover {
+    color: #A4031F;
+}
+
+.main-table-header-2 {
+    background-color: #A4031F;
+    box-shadow: 10px -8px 0 #840016;
+}
+
+/* EXIT EDITING */
+.exit-editing {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -1; /* Put behind everything */
+}
+
+
+/* THIS IS THE FORM FOR ADDING EXPENSES */
+.add-expenses {
+    background-color: red;
+    margin-bottom: 50px;
+}
+
+#wastefulTd {
+    padding: 0 0 0 10px;
+    width: 30px;
+}
+
+#wasteful {
+    width: 25px;
+    height: 25px;
+}
+
+/* GLOBAL FORM STYLING */
+form {
+    width: 100%;
+}
+
+input {
+    background-color: black;
+    color: #EDF2F4;
+    border: solid 2px gray;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #EDF2F4;
+}
+
+#totalOfTheMonth_container {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+    color: #EDF2F4;
+    background-color: #272635;
+    border: 10px solid #F4AC32;
+    box-shadow: 8px -8px 0 #D18A10;
+
+    margin-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#totalOfTheMonth {
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 0;
+}
+
+#totalMonthSelector {
+    font-size: 25px;
+    font-weight: 1000;
+
+    text-align: right;
+
+    background-color: #272635;
+    color: #EDF2F4;
+    border: none;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.logout {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    margin: 0;
+
+    z-index: 999;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------*/
+@media (max-height: 300px) {
+    body {
+        display: none;
+    }
+}
+
+/* Mobile Styling */
+@media (max-width: 650px) {
+    .logout {
+        height: 18px;
+    }
+
+    body {
+        margin: 25px;
+    }
+
+    th {
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+
+    .main-table-header {
+        box-shadow: 4px -4px 0 #840016;
+    }
+
+    section {
+        margin-bottom: 10px;
+    }
+
+    .main-table-content {
+        height: 425px;
+        border: 8px solid white;
+    }
+
+    td {
+        padding: 5px;
+        font-weight: 750;
+        font-size: 6px;
+    }
+
+    .editor-container {
+        border: 8px solid white;
+    }
+
+    .editor-container input {
+        width: 25px;
+    }
+
+    .editor-container input, .editor-container a, .editor-container button, .editor-container select {
+         font-size: 6px;
+    }
+
+    .main-table-header-2 {
+        font-size: 2px;
+        padding: 0;
+        box-shadow: 3px -3px 0 #840016;
+    }
+
+    .main-table-header-2 th{
+        padding: 8px 2px;
+        font-weight: 1000;
+        font-size: 8px;
+    }
+
+    .add-container {
+        background-color: #272635;
+        font-weight: bold;
+        border: 8px solid white;
+    }
+
+    .add-table-content {
+        margin-top: 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .add-container .manual input, .add-container .manual select, .add-container .manual button {
+         font-size: 6px;
+         font-weight: 1000;
+    }
+
+    .add-container .manual input {
+         font-size: 6px;
+         font-weight: 1000;
+         width: 40px;
+    }
+
+    .add-container .manual button {
+        padding-left: 15px;
+    }
+
+    .add-container .image input, .add-container .image select, .add-container .image button {
+         font-size: 6px;
+         font-weight: 750;
+    }
+
+    .add-container .manual .txt_ind1 {
+        text-indent: -15px;
+    }
+
+    .add-container .manual .txt_ind2 {
+        text-indent: -15px;
+    }
+
+    .add-container .image select {
+        width: 51px;
+        padding-left: 10px;
+        margin-left: -2px;
+        text-align: left;
+    }
+
+    .add-container .manual select {
+        width: 51px;
+        padding-left: 10px;
+        margin-left: -2px;
+        text-align: left;
+    }
+
+    .editor-container select {
+        width: 51px;
+        padding-left: 10px;
+        margin-left: -2px;
+        text-align: left;
+    }
+
+    .add-container .image input {
+        font-size: 6px;
+        font-weight: 1000;
+        width: 40px;
+    }
+
+    .add-container .image button {
+        padding-left: 15px;
+    }
+
+    #wastefulTd {
+        padding: 0 0 0 2px;
+        width: 8px;
+    }
+
+    #wasteful {
+        width: 7px;
+        height: 7px;
+    }
+
+    #totalOfTheMonth_container {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 5px;
+
+        width: auto;
+        height: auto;
+        color: #EDF2F4;
+        background-color: #272635;
+        border: 4px solid #F4AC32;
+        box-shadow: 2px -2px 0 #D18A10;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #totalOfTheMonth {
+        font-size: 7px;
+        font-weight: 800;
+
+        width: 174px;
+        height: auto;
+    }
+
+    #totalMonthSelector {
+        font-size: 7px;
+        text-align: center;
+        width: 57px;
+        padding: 0;
+        margin: 0;
+    }
+}

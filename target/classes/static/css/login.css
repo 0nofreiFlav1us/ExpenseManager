@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    margin: 0; /* Remove margin to ensure proper centering */
+    font-weight: 750;
+    font-size: 22px;
+    display: flex; /* Use Flexbox to center the entire page */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the body height to the viewport height */
+}
+
+form a {
+    text-decoration: none;
+    color: #EDF2F4;
+}
+
+.center-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container .login-container form {
+    display: flex; /* Center the container content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width for better scaling */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: #201F2C;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    width: 925px;
+}
+
+#login {
+    text-decoration: underline;
+}
+
+input {
+    margin: 2px;
+    height: 50px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 500;
+    color: #EDF2F4;
+    background-color: #272635;
+    border: none;
+    text-align: center;
+}
+
+button {
+    margin: 2px;
+}
+
+.clickable-text {
+    color: #EDF2F4;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.clickable-text:hover {
+    color: #A4031F;
+    text-decoration: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: #EDF2F4;
+}
+
+.header {
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    background-color: #A4031F;
+    box-shadow: 8px -8px 0 #840016;
+    margin: 10px;
+    width: 1000px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Mobile Styling */
+@media (max-width: 650px) {
+    .header {
+        font-size: 25px;
+        height: 55px;
+        width: 325px;
+    }
+
+    .login-container {
+        width: 300px;
+    }
+
+    input {
+        font-size: 22px;
+        height: 40px;
+    }
+
+    .clickable-text {
+        font-size: 20px;
+    }
+}

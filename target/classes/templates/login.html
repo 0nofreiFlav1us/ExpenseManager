@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--suppress HtmlFormInputWithoutLabel, HtmlUnknownTag, HtmlUnknownTarget -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+</head>
+<body>
+
+    <div class="center-container">
+        <div class="header">
+            <a id="login">LOGIN</a>
+            <a href="/account/signup" id="signup">SIGNUP</a>
+        </div>
+        <div class="login-container">
+            <form action="/account/login/action" method="POST" id="login-form">
+                <input type="text" id="login-username" name="username" required maxlength="20" value="username">
+                <br>
+                <input type="password" id="login-password" name="password" required value="password">
+                <br>
+                    <p class="clickable-text" onclick="submitForm()">[###]</p>
+                <br>
+            </form>
+        </div>
+    </div>
+
+<script th:src="@{/js/login.js}"></script>
+</body>
+</html>
